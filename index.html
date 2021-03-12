@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/99c003c808.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Windonw Name</title>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>SISTEMA INTEGRADO DE GESTIÓN</h1>
+            <img src="imagenes/usuario.png" alt="Usuario">
+            <p>Usuario 1</p>
+        </div>
+    </header>
+        <nav>
+            <div class="menu">
+                <button class="btn inicio">
+                    <img src="imagenes/inicio.png" alt="Inicio">
+                    <p>Inicio</p>
+                </button>
+                <button class="btn usuarios">
+                    <img src="imagenes/usuarios.png" alt="Usuarios">
+                    <p>Usuarios</p>
+                </button>
+                <button class="btn clientes">
+                    <img src="imagenes/clientes.png" alt="Clientes">
+                    <p>Clientes</p>
+                </button>
+                <button class="btn proveedores">
+                    <img src="imagenes/proveedores.png" alt="Proveedores">
+                    <p>Proveedores</p>
+                </button>
+                <button class="btn productos">
+                    <img src="imagenes/productos.png" alt="Productos">
+                    <p>Productos</p>
+                </button>
+            </div>
+                <div class="buscador">
+                    <label for="buscador">Buscar en la web </label>
+                    <input type="search" id="buscador">
+                    <button id="buscar">
+                    <img src="imagenes/lupa.png" alt="Buscar">
+                    <p>Buscar</p>
+                    </button>
+                </div>
+        </nav>
+        <div class="contenedor">
+            <i id="hamburguesa" class="fas fa-bars"></i>
+            <div class="contenedor-style">
+                <ul>
+                    <li class="nos"><a><i class="fas fa-user"></i> <span>User</span> </a></li>
+                    <li><a href=""><i class="fas fa-house-user"></i> <span>Inicio</span> <i  class="fas fa-chevron-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-child"></i> <span>Usuarios</span> <i  class="fas fa-chevron-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-user-cog"></i> <span>Clientes</span> <i  class="fas fa-chevron-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-cog"></i> <span>Proveedores</span> <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-info-circle"></i> <span>Productos</span> <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-sign-in-alt"></i> <span>Cerrar Sesión</span> <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <div class="contenedor-form">
+                <form action="empleado" method="POST">
+                    <fieldset>
+                        <legend id="legend"> Agregar Producto</legend>
+                    <div class="style">  
+                        <p>Código*</p>
+                        <input type="tel" name="codigo" title="Solo numeros" maxlength="6" pattern="[0-9]{6}" required>
+                        <button name="codigo">Validar</button>
+                    </div>
+    
+                    <div class="style">
+                        <p>Nombre*</p>
+                        <input class="style-input" type="text" name="nombre" placeholder="Solo letras y números" maxlength="100" required>    
+                    </div>
+    
+                    <div class="style">
+                        <p>Abreviatura</p>
+                        <input class="style-input" type="text" name="abreviatura" placeholder="Solo letras" maxlength="10" title="Solo letras" pattern="[a-z A-Z \s]{10}" required>
+                    </div>
+    
+                    <div class="style">
+                        <p>Categoria*</p>
+                        <select class="style-input" name="categorias" required>
+                            <optgroup label="Opciones">
+                                <option>Panes especiales</option>
+                                <option>Lácteos</option>
+                                <option>Pasteles</option>
+                            </optgroup>
+                        </select>
+                    </div>
+            
+                    <div class="style">
+                        <p>Ruc Proveedor*</p>
+                        <input class="style-input" type="tel" placeholder="Solo numeros" maxlength="10" pattern="[0-9]{10}">
+                    </div>
+    
+                    <div class="style">
+                        <p>Precio*</p>
+                        <input class="style-input" type="number" step="0.01" min="0" max="10">
+                    </div>
+    
+                    <div class="style">
+                        <p>Color de etiqueta</p>
+                        <input id="colores" type="color">
+                    </div>
+        
+                    <div class="style">
+                        <p class="modific-style">Fecha*</p>
+                        <input class="box" type="date">
+                    </div>
+        
+                    <div class="style">
+                        <p>Estado*</p>
+                        <input type="radio" name="estado">
+                        <p class="estados" >Activo</p>
+                        <input type="radio" name="estado">
+                        <p class="estados">Suspendido</p> 
+                        <input type="radio" name="estado">               
+                         <p class="estados">De baja</p>
+                    </div>
+    
+                    <div class="style">
+                        <p> Afecto a impuesto</p>
+                        <input type="checkbox">
+                    </div>
+                    
+                    <div class="style">
+                        <p class="foto">Foto</p>
+                        <input id="file" type="file" accept="image/png, jpg/image">
+                    </div>
+        
+                    <div class="style">
+                        <p>Descripción</p>
+                        <textarea id="textarea" name="descripcion" id="" cols="60" rows="4"></textarea>
+                    </div>
+                    <div class="gl">
+                        <button type="reset"><i class="fas fa-paint-brush"></i> Limpiar</button>
+                        <button type="submit"><i class="far fa-save"></i> Grabar</button>
+                    </div>
+                </fieldset>
+                </form>
+            </div>
+        </main>
+    <div class="reponsive">
+        <form class="reponsive-style" >
+            <legend>Agregar Producto</legend>
+                <div class="style">  
+                    <p>Código*</p>
+                    <input id="codigo" type="tel" name="codigo" title="Solo numeros" maxlength="6" pattern="[0-9]{6}" required>
+                    <button id="boton" name="codigo">Validar</button>
+                </div>
+
+                <div class="style">
+                    <p>Nombre*</p>
+                    <input class="style-input" type="text" name="nombre" placeholder="Solo letras y números" maxlength="100" required>    
+                </div>
+
+                <div class="style">
+                    <p>Abreviatura</p>
+                    <input class="style-input" type="text" name="abreviatura" placeholder="Solo letras" maxlength="10" title="Solo letras" pattern="[a-z A-Z \s]{10}" required>
+                </div>
+
+                <div class="style">
+                    <p>Categoria*</p>
+                    <select class="style-input" name="categorias" required>
+                        <optgroup label="Opciones">
+                            <option>Panes especiales</option>
+                            <option>Lácteos</option>
+                            <option>Pasteles</option>
+                        </optgroup>
+                    </select>
+                </div>
+        
+                <div class="style">
+                    <p>Ruc Proveedor*</p>
+                    <input class="style-input" type="tel" placeholder="Solo numeros" maxlength="10" pattern="[0-9]{10}">
+                </div>
+
+                <div class="style">
+                    <p>Precio*</p>
+                    <input class="style-input" type="number" step="0.01" min="0" max="10">
+                </div>
+
+                <div class="style">
+                    <p id="color">Color de etiqueta</p>
+                    <input type="color">
+                </div>
+    
+                <div class="style">
+                    <p class="modific-style">Fecha*</p>
+                    <input class="box" type="date">
+                </div>
+    
+                <div class="style">
+                    <p class="estado">Estado*</p>
+                    <input class="cajas" type="radio" name="estado">
+                    <p class="radio" >Activo</p>
+                    <input class="radio" type="radio" name="estado">
+                    <p class="radio">Suspendido</p> 
+                    <input class="cajas" type="radio" name="estado">               
+                     <p class="radio">De baja</p>
+                </div>
+
+                <div class="style">
+                    <p id="impuesto">Afecto a impuesto</p>
+                    <input class="cajas" type="checkbox">
+                </div>
+                
+                <div class="style">
+                    <p class="foto">Foto</p>
+                    <input id="file" type="file" accept="image/png, jpg/image">
+                </div>
+    
+                <div class="style">
+                    <p>Descripción</p>
+                    <textarea name="descripcion" id="" cols="10" rows="4"></textarea>
+                </div>
+                <div class="separacion">
+                    <button id="reset" type="reset"><i class="fas fa-paint-brush"></i> Limpiar</button>
+                    <button id="submit" type="submit"><i class="far fa-save"></i> Grabar</button>
+                </div>
+        </form>
+    </div>
+
+    <footer>
+        <a href="#" target="_blank">¿Que hacemos?</a>
+        <a href="#" target="_blank">Enlaces principales</a>
+        <a href="#" target="_blank">Contactanos</a>
+    </footer>
+    <div class="pie"> 
+        <a  href="#" target="_BLANK">¿Qué hacemos?</a>
+        <a href="#" target="_BLANK">Enlaces principales</a>
+        <a href="#" target="_BLANK">Contactos</a>
+    </div>
+</body>
+</html>
